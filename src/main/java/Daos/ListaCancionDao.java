@@ -66,4 +66,56 @@ public class ListaCancionDao {
         }
         return listaCancion;
     }
+
+    public ArrayList<Cancion> obtenerListaCancionesFavoritas(){
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        ArrayList<Cancion> listaCancionFavorita = new ArrayList<>();
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT * FROM cancion\n" +
+                     "where cancionFavorita=1")) {
+
+            while (rs.next()) {
+                Cancion cancion = new Cancion();
+                int id = rs.getInt(1);
+                String nombreCancion = rs.getString(2);
+                String banda = rs.getString(3);
+                int cancionFavorita = rs.getInt(4);
+                cancion.setIdcancion(id);
+                cancion.setNombre_cancion(nombreCancion);
+                cancion.setBada(banda);
+                cancion.setCancionfavorita(cancionFavorita);
+                listaCancionFavorita.add(cancion);
+            }
+
+        } catch (SQLException e) {
+            System.out.println("No se pudo realizar la busqueda");
+        }
+        return listaCancionFavorita;
+    }
+
+    public void agregar(int idcancion){
+
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            String sql = "UPDATE cancion SET cancionFavorita=1 WHERE idcancion = ?";
+            try (Connection conn = DriverManager.getConnection(url, user, pass);
+                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+                pstmt.setInt(1, idcancion);
+
+                pstmt.executeUpdate();
+
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+
+    }
 }

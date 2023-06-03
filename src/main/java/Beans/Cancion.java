@@ -4,6 +4,16 @@ public class Cancion {
     private int idcancion;
     private String nombre_cancion;
 
+    private int cancionfavorita;
+
+    public int getCancionfavorita() {
+        return cancionfavorita;
+    }
+
+    public void setCancionfavorita(int cancionfavorita) {
+        this.cancionfavorita = cancionfavorita;
+    }
+
     public int getIdcancion() {
         return idcancion;
     }

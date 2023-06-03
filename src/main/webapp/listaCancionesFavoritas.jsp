@@ -3,7 +3,7 @@
 <%@ page import="java.util.Date"%>
 <%@ page import="Beans.Cancion" %>
 <%
-  ArrayList<Cancion> listaCanciones = (ArrayList<Cancion>) request.getAttribute("listaCanciones");
+  ArrayList<Cancion> listaCanciones = (ArrayList<Cancion>) request.getAttribute("listaCancionesFavoritas");
 %>
 <html>
 <!--Colocar como value: nombre de la presente página -->
@@ -18,9 +18,12 @@
   </jsp:include>
   <div class="pb-5 pt-4 px-3 titlecolor d-flex justify-content-between align-items-center">
     <div class="col-lg-6">
-      <h1 class='text-light'>Lista de Canciones por Banda</h1>
+      <h1 class='text-light'>Lista de Canciones Favoritas</h1>
+      <% if (listaCanciones.size()==0)
+        { %>
+      <h1 class='text-light'>Aun No se han Agregado Canciones</h1>
+      <%  }  %>
     </div>
-    <a class="btn btn-warning" href="<%=request.getContextPath()%>/listaCanciones?action=mt">Mostrar todas las canciones</a>
   </div>
   <div class="tabla">
     <table class="table table-dark table-transparent table-hover">
@@ -29,7 +32,6 @@
         <th>ID</th>
         <th>CANCION</th>
         <th>BANDA</th>
-        <th></th>
       </tr>
       </thead>
 
@@ -39,7 +41,6 @@
         <td><%=cancion.getIdcancion()%></td>
         <td><%=cancion.getNombre_cancion()%></td>
         <td><%=cancion.getBada()%></td>
-        <td><a class="btn btn-warning" href="<%=request.getContextPath()%>/listaCanciones?action=agregar&id=<%=cancion.getIdcancion()%>">Agregar a Favoritas</a></td>
       </tr>
       <%  }  %>
       </tbody>

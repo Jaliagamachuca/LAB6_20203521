@@ -34,6 +34,15 @@ public class ListaCancionServlet extends HttpServlet {
                 view = request.getRequestDispatcher("listaCancionesTotales.jsp");
                 view.forward(request, response);
                 break;
+            case "agregar":
+                String idCancion = request.getParameter("id");
+                int idCancionEntero = Integer.parseInt(idCancion);
+
+                ListaCancionDao agregarCancion = new ListaCancionDao();
+
+                agregarCancion.agregar(idCancionEntero);
+                response.sendRedirect(request.getContextPath() + "/listaCanciones");
+                break;
         }
     }
 

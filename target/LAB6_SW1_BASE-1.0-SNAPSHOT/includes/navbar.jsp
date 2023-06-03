@@ -24,6 +24,11 @@
             <li class="nav-item">
                 <a class="nav-link <%=request.getParameter("page").equals("canciones")? "active": "" %>" href="<%=request.getContextPath()%>/listaCanciones">Canciones</a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link <%=request.getParameter("page").equals("canciones")? "active": "" %>" href="<%=request.getContextPath()%>/listaCancioneFavoritas">Canciones Favoritas</a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link <%=request.getParameter("page").equals("artistas")? "active": "" %>" href="<%=request.getContextPath()%>/listaArtistas">Artistas</a>
             </li>

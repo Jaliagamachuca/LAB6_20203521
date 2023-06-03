@@ -28,6 +28,7 @@
         <th>ID</th>
         <th>CANCION</th>
         <th>BANDA</th>
+        <th></th>
       </tr>
       </thead>
 
@@ -37,6 +38,7 @@
         <td><%=cancion.getIdcancion()%></td>
         <td><%=cancion.getNombre_cancion()%></td>
         <td><%=cancion.getBada()%></td>
+        <td><a class="btn btn-warning" href="<%=request.getContextPath()%>/listaCanciones?action=agregar&id=<%=cancion.getIdcancion()%>">Agregar a Favoritas</a></td>
       </tr>
       <%  }  %>
       </tbody>
