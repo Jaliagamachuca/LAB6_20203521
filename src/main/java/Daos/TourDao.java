@@ -5,7 +5,7 @@ import Beans.Tour;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class TourDao {
+public class TourDao extends BaseDao{
 
     private static String user = "root";
     private static String pass = "root";

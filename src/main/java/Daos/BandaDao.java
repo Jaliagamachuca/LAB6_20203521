@@ -4,7 +4,7 @@ import Beans.Banda;
 
 import java.util.ArrayList;
 
-public class BandaDao {
+public class BandaDao extends BaseDao{
     private static String user = "root";
     private static String pass = "root";
     private static String url = "jdbc:mysql...";

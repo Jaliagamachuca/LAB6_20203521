@@ -5,7 +5,7 @@ import Beans.Cancion;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class ListaCancionDao {
+public class ListaCancionDao extends BaseDao{
 
     private static String user = "root";
     private static String pass = "root";
@@ -111,11 +111,12 @@ public class ListaCancionDao {
 
                 pstmt.setInt(1, idcancion);
 
-                pstmt.executeUpdate();
+                pstmt.executeQuery();
 
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
+
 
     }
 }

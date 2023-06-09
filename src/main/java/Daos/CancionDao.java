@@ -6,7 +6,7 @@ import Beans.Tour;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class CancionDao {
+public class CancionDao extends BaseDao{
     private static String user = "root";
     private static String pass = "root";
     private static String url = "jdbc:mysql://localhost:3306/lab6sw1?serverTimezone=America/Lima";

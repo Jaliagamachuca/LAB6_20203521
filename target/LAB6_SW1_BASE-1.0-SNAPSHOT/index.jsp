@@ -12,7 +12,7 @@
             </jsp:include>
             <div class="pb-5 pt-4 px-3 titlecolor d-flex justify-content-between align-items-center">
                 <div class="col-lg-6">
-                    <h1 class='text-light'>Bienvenido, este es un ejemplo de tabla:</h1>
+                    <h1 class='text-light'>Bienvenido, estamos listos para el mundial 2026</h1>
                 </div>
             </div>
             <div class="tabla">
@@ -20,8 +20,8 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>NOMBRE</th>
-                            <th>ROL</th>
+                            <th>INTEGRANTES</th>
+                            <th>CODIGO</th>
                             <th>CORREO</th>
                         </tr>
                     </thead>
@@ -30,77 +30,24 @@
                         <tr>
                             <td>1
                             </td>
-                            <td>Stuardo Lucho
+                            <td>RICARDO ALFONSO ALVARADO RUIZ
                             </td>
-                            <td>Profesor
+                            <td>20190057
                             </td>
-                            <td>stuardo.lucho@pucp.edu.pe
+                            <td>a20190057@pucp.edu.pe
                             </td>
                         </tr>
 
                         <tr>
                             <td>2
                             </td>
-                            <td>Oscar Diaz
+                            <td>JULIO CÉSAR ALIAGA MACHUCA
                             </td>
-                            <td>JP
+                            <td>20203521
                             </td>
-                            <td>diaz.oa@pucp.edu.pe
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>3
-                            </td>
-                            <td>Mario Gustavo
-                            </td>
-                            <td>JP
-                            </td>
-                            <td>a2015@pucp.edu.pe
+                            <td>a20203521@pucp.edu.pe
                             </td>
                         </tr>
-
-                        <tr>
-                            <td>4
-                            </td>
-                            <td>Rodrigo Adauto
-                            </td>
-                            <td>JP
-                            </td>
-                            <td>a20160679@pucp.edu.pe
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4
-                            </td>
-                            <td>Álvaro Burga
-                            </td>
-                            <td>JP
-                            </td>
-                            <td>a20160679@pucp.edu.pe
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4
-                            </td>
-                            <td>Josué López
-                            </td>
-                            <td>JP
-                            </td>
-                            <td>a20160679@pucp.edu.pe
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4
-                            </td>
-                            <td> Alejandro Macedo
-                            </td>
-                            <td>JP
-                            </td>
-                            <td>a20160679@pucp.edu.pe
-                            </td>
-                        </tr>
-
                     </tbody>
                 </table>
             </div>
